@@ -1,28 +1,41 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bulls And Cows</title>
-    <link rel="stylesheet" href="main.css"> 
-</head>
-
-<body>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
     <main>
+      <div id="scores">
         <div>
+          <p>Лучший результат:</p>
+          <p>Текущий результат:</p>
+        </div>
         <div>
-            <input type="text">
-            <button i="guess-btn">Guess</button>
+          <p id="highScore">0</p>
+          <p id="score"></p>
         </div>
-        <table id="history">
-            <tr><th>Guees Number</th>
-            <th>Hint</th>
-        </tr>
-        </table>
+      </div>
+      <div>
+        <div class="inputWrapper">
+          <input id="guess" type="text" />
+          <button id="guess-btn">Угадать!</button>
         </div>
+        <div class="historyWrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Ходы</th>
+                <th>Подсказки</th>
+              </tr>
+            </thead>
+            <tbody id="history"></tbody>
+          </table>
+        </div>
+      </div>
     </main>
     <script src="./main.js"></script>
-</body>
-
+  </body>
 </html>
